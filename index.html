@@ -1,0 +1,401 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <title>Петиция против Google | Скачать PDF</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            background: linear-gradient(135deg, #0a0a0a, #1a1a2e);
+            font-family: 'Segoe UI', 'Arial', sans-serif;
+            min-height: 100vh;
+            padding: 20px;
+        }
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            background: #0f0f1a;
+            border-radius: 30px;
+            overflow: hidden;
+            box-shadow: 0 0 50px rgba(0,100,255,0.3);
+        }
+        .header {
+            background: linear-gradient(135deg, #ff0050, #cc0040);
+            padding: 30px;
+            text-align: center;
+        }
+        .header h1 {
+            color: white;
+            font-size: 28px;
+        }
+        .header p {
+            color: #ffdddd;
+            font-size: 14px;
+            margin-top: 10px;
+        }
+        .content {
+            padding: 30px;
+        }
+        .petition-text {
+            background: #1a1a3e;
+            border-radius: 20px;
+            padding: 20px;
+            margin-bottom: 20px;
+            border: 1px solid #00aaff;
+        }
+        .petition-text h2 {
+            color: #00aaff;
+            font-size: 20px;
+            margin-bottom: 15px;
+        }
+        .petition-text p {
+            color: #ddd;
+            font-size: 14px;
+            line-height: 1.6;
+            margin-bottom: 15px;
+        }
+        .demand {
+            background: #ff005022;
+            padding: 15px;
+            border-radius: 15px;
+            margin: 15px 0;
+            border-left: 4px solid #ff0050;
+        }
+        .demand h3 {
+            color: #ff0050;
+            margin-bottom: 8px;
+        }
+        .signature-area {
+            background: #1a1a3e;
+            border-radius: 20px;
+            padding: 20px;
+            margin-bottom: 20px;
+            border: 1px solid #00ff88;
+        }
+        .signature-area h3 {
+            color: #00ff88;
+            margin-bottom: 15px;
+        }
+        input, textarea {
+            width: 100%;
+            padding: 12px;
+            margin: 10px 0;
+            background: #0a0a2e;
+            border: 1px solid #00aaff;
+            border-radius: 12px;
+            color: white;
+            font-size: 14px;
+        }
+        button {
+            background: #00aaff;
+            color: white;
+            border: none;
+            padding: 14px;
+            border-radius: 12px;
+            font-size: 16px;
+            font-weight: bold;
+            cursor: pointer;
+            width: 100%;
+            margin-top: 10px;
+        }
+        .signature-list {
+            max-height: 200px;
+            overflow-y: auto;
+            background: #0a0a2e;
+            border-radius: 12px;
+            padding: 10px;
+            margin-top: 15px;
+        }
+        .signature-item {
+            padding: 8px;
+            border-bottom: 1px solid #333;
+            font-size: 12px;
+            color: #aaa;
+        }
+        .password-section {
+            background: #2a2a4e;
+            border-radius: 15px;
+            padding: 15px;
+            margin-top: 20px;
+            text-align: center;
+        }
+        .password-section input {
+            background: #1a1a3e;
+            text-align: center;
+            font-size: 18px;
+            letter-spacing: 2px;
+        }
+        .download-btn {
+            background: #00ff88;
+            color: black;
+            margin-top: 10px;
+        }
+        .error-msg {
+            color: #ff0050;
+            font-size: 12px;
+            margin-top: 8px;
+        }
+        .footer {
+            background: #0a0a2e;
+            padding: 20px;
+            text-align: center;
+            font-size: 11px;
+            color: #666;
+        }
+        ::-webkit-scrollbar { width: 3px; }
+        ::-webkit-scrollbar-track { background: #1a1a3e; }
+        ::-webkit-scrollbar-thumb { background: #00aaff; }
+    </style>
+</head>
+<body>
+<div class="container">
+    <div class="header">
+        <h1>📜 ПЕТИЦИЯ ПРОТИВ GOOGLE</h1>
+        <p>Требуем разблокировать наши телефоны!</p>
+    </div>
+    
+    <div class="content">
+        <div class="petition-text">
+            <h2>🇧🇾 Республика Беларусь</h2>
+            <p><strong>Кому:</strong> Министерство антимонопольного регулирования и торговли (МАРТ)<br>
+            <strong>От:</strong> Соловей Вадим Сергеевич<br>
+            <strong>Дата:</strong> 20 мая 2026 года</p>
+            
+            <div class="demand">
+                <h3>📱 ТРЕБОВАНИЕ 1</h3>
+                <p>Обязать Google разблокировать загрузчик (OEM Unlocking) на всех телефонах с Android.</p>
+            </div>
+            
+            <div class="demand">
+                <h3>🗑️ ТРЕБОВАНИЕ 2</h3>
+                <p>Обязать Google дать возможность удалять любые предустановленные приложения (YouTube, Gmail, Play Market и другие).</p>
+            </div>
+            
+            <div class="demand">
+                <h3>⚖️ ТРЕБОВАНИЕ 3</h3>
+                <p>Признать действия Google нарушением права собственности и применить меры воздействия (штраф, предписание).</p>
+            </div>
+        </div>
+        
+        <div class="signature-area">
+            <h3>✍️ ПОДПИШИТЕ ПЕТИЦИЮ</h3>
+            <input type="text" id="signName" placeholder="Ваше полное ФИО">
+            <input type="text" id="signCity" placeholder="Ваш город">
+            <button onclick="addSignature()">ПОДПИСАТЬСЯ</button>
+            
+            <div class="signature-list" id="signatureList">
+                <div class="signature-item">✊ Соловей Вадим Сергеевич — Беларусь (20.05.2026)</div>
+            </div>
+            <div style="margin-top: 10px; font-size: 12px; color: #888;" id="signCount">Всего подписей: 1</div>
+        </div>
+        
+        <div class="password-section">
+            <h3 style="color:#ffaa00; margin-bottom:10px;">🔐 ДЛЯ СКАЧИВАНИЯ PDF</h3>
+            <p style="color:#aaa; font-size:12px; margin-bottom:10px;">Введите пароль доступа</p>
+            <input type="password" id="passwordInput" placeholder="Введите пароль" maxlength="20">
+            <button class="download-btn" onclick="checkPasswordAndDownload()">📥 СКАЧАТЬ ПЕТИЦИЮ PDF</button>
+            <div id="errorMsg" class="error-msg"></div>
+        </div>
+    </div>
+    
+    <div class="footer">
+        <p>© 2026 | Инициатор: Соловей Вадим Сергеевич</p>
+        <p>Код доступа выдан организатором петиции</p>
+    </div>
+</div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
+<script>
+    // ПАРОЛЬ ДЛЯ СКАЧИВАНИЯ (НЕ НАПИСАН НИГДЕ)
+    const CORRECT_PASSWORD = "1929131";
+    
+    let signatures = [];
+    
+    // Загрузка подписей из localStorage
+    function loadSignatures() {
+        const saved = localStorage.getItem('petition_signatures');
+        if (saved) {
+            signatures = JSON.parse(saved);
+        } else {
+            signatures = [
+                { name: "Соловей Вадим Сергеевич", city: "Беларусь", date: "20.05.2026" }
+            ];
+        }
+        updateSignatureDisplay();
+    }
+    
+    function saveSignatures() {
+        localStorage.setItem('petition_signatures', JSON.stringify(signatures));
+    }
+    
+    function addSignature() {
+        const name = document.getElementById('signName').value.trim();
+        const city = document.getElementById('signCity').value.trim();
+        
+        if (!name) {
+            alert("Введите ваше ФИО!");
+            return;
+        }
+        
+        const newSig = {
+            name: name,
+            city: city || "Беларусь",
+            date: new Date().toLocaleDateString('ru-RU'),
+            time: new Date().toLocaleTimeString()
+        };
+        
+        signatures.unshift(newSig);
+        saveSignatures();
+        updateSignatureDisplay();
+        
+        document.getElementById('signName').value = '';
+        document.getElementById('signCity').value = '';
+        
+        alert("✅ Спасибо за подпись! Вы поддержали петицию против Google!");
+    }
+    
+    function updateSignatureDisplay() {
+        const listDiv = document.getElementById('signatureList');
+        const countSpan = document.getElementById('signCount');
+        
+        if (signatures.length === 0) {
+            listDiv.innerHTML = '<div class="signature-item">Будьте первым, кто подпишет петицию!</div>';
+            countSpan.innerHTML = 'Всего подписей: 0';
+            return;
+        }
+        
+        let html = '';
+        for (let i = 0; i < Math.min(signatures.length, 20); i++) {
+            const s = signatures[i];
+            html += `<div class="signature-item">✊ ${s.name} — ${s.city} (${s.date})</div>`;
+        }
+        listDiv.innerHTML = html;
+        countSpan.innerHTML = `Всего подписей: ${signatures.length}`;
+    }
+    
+    function checkPasswordAndDownload() {
+        const enteredPassword = document.getElementById('passwordInput').value;
+        const errorMsg = document.getElementById('errorMsg');
+        
+        if (enteredPassword !== CORRECT_PASSWORD) {
+            errorMsg.innerHTML = '❌ НЕВЕРНЫЙ ПАРОЛЬ! Доступ запрещён.';
+            setTimeout(() => { errorMsg.innerHTML = ''; }, 3000);
+            return;
+        }
+        
+        errorMsg.innerHTML = '✅ Пароль верный! Создаём PDF...';
+        generatePDF();
+    }
+    
+    function generatePDF() {
+        // Создаём HTML для PDF
+        const currentDate = new Date().toLocaleDateString('ru-RU');
+        const signatureList = signatures.map((s, i) => `${i+1}. ${s.name} — ${s.city} (${s.date})`).join('\n');
+        
+        const pdfContent = `
+        <!DOCTYPE html>
+        <html>
+        <head>
+            <meta charset="UTF-8">
+            <title>Петиция против Google</title>
+            <style>
+                body {
+                    font-family: 'DejaVu Sans', 'Arial', sans-serif;
+                    padding: 40px;
+                    line-height: 1.6;
+                }
+                h1 { color: #ff0050; text-align: center; }
+                h2 { color: #00aaff; margin-top: 30px; }
+                .header { text-align: center; margin-bottom: 30px; }
+                .demand {
+                    background: #f0f0f0;
+                    padding: 15px;
+                    margin: 20px 0;
+                    border-left: 4px solid #ff0050;
+                }
+                .signature-list {
+                    margin-top: 30px;
+                    padding: 20px;
+                    background: #f9f9f9;
+                }
+                .signature-item { margin: 5px 0; }
+                .footer {
+                    margin-top: 50px;
+                    text-align: center;
+                    font-size: 10px;
+                    color: #888;
+                }
+                .page-break { page-break-before: always; }
+            </style>
+        </head>
+        <body>
+            <div class="header">
+                <h1>📜 ПЕТИЦИЯ ПРОТИВ GOOGLE</h1>
+                <p>Республика Беларусь, г. Минск | ${currentDate}</p>
+            </div>
+            
+            <h2>Кому: Министерство антимонопольного регулирования и торговли (МАРТ)</h2>
+            <p><strong>От:</strong> Соловей Вадим Сергеевич<br>
+            <strong>Контактный телефон:</strong> [указан в обращении]<br>
+            <strong>Email:</strong> [указан в обращении]</p>
+            
+            <div class="demand">
+                <h3>📱 ТРЕБОВАНИЕ 1</h3>
+                <p>Обязать компанию Google разблокировать загрузчик (OEM Unlocking) на всех телефонах с операционной системой Android.</p>
+            </div>
+            
+            <div class="demand">
+                <h3>🗑️ ТРЕБОВАНИЕ 2</h3>
+                <p>Обязать компанию Google предоставить возможность удалять любые предустановленные приложения (YouTube, Gmail, Google Play Market и другие) без ограничений.</p>
+            </div>
+            
+            <div class="demand">
+                <h3>⚖️ ТРЕБОВАНИЕ 3</h3>
+                <p>Признать действия компании Google нарушением права собственности граждан Республики Беларусь и применить меры воздействия, предусмотренные законодательством (штраф, предписание).</p>
+            </div>
+            
+            <h2>📋 СПИСОК ПОДПИСАВШИХСЯ ГРАЖДАН:</h2>
+            <div class="signature-list">
+                ${signatures.map((s, i) => `<div class="signature-item">${i+1}. ${s.name} — ${s.city} (${s.date})</div>`).join('')}
+            </div>
+            <div style="margin-top: 20px;"><strong>Всего подписей: ${signatures.length}</strong></div>
+            
+            <div class="footer">
+                <p>Данная петиция направлена в МАРТ Республики Беларусь.</p>
+                <p>Подписи собраны в период с 20.05.2026 по ${currentDate}</p>
+                <p>Инициатор: Соловей Вадим Сергеевич</p>
+            </div>
+        </body>
+        </html>
+        `;
+        
+        // Создаём PDF
+        const element = document.createElement('div');
+        element.innerHTML = pdfContent;
+        document.body.appendChild(element);
+        
+        const opt = {
+            margin: [10, 10, 10, 10],
+            filename: `Petitsiya_protiv_Google_${Date.now()}.pdf`,
+            image: { type: 'jpeg', quality: 0.98 },
+            html2canvas: { scale: 2, useCORS: true },
+            jsPDF: { unit: 'mm', format: 'a4', orientation: 'portrait' }
+        };
+        
+        html2pdf().set(opt).from(element).save().then(() => {
+            document.body.removeChild(element);
+            document.getElementById('errorMsg').innerHTML = '✅ PDF успешно скачан!';
+            setTimeout(() => {
+                document.getElementById('errorMsg').innerHTML = '';
+            }, 3000);
+        }).catch(() => {
+            document.body.removeChild(element);
+            document.getElementById('errorMsg').innerHTML = '❌ Ошибка создания PDF';
+        });
+    }
+    
+    loadSignatures();
+</script>
+</body>
+</html>
